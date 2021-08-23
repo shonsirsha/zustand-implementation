@@ -1,7 +1,56 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
+  border: 5px violet solid;
+  min-height: 100vh;
+}
+.del {
+  margin-left: 16px;
 }
 
+.done {
+  text-decoration: line-through;
+}
+
+h1 {
+  margin-bottom: 32px;
+}
+h2 {
+  margin-top: 16px;
+}
+p {
+  font-size: 24px;
+}
+kbd {
+  margin-top: auto;
+}
+.flex {
+  display: flex;
+}
+
+.todosView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px green solid;
+  padding: 32px;
+  width: 50%;
+}
+.todoCreator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px orange solid;
+  padding: 32px;
+  width: 50%;
+}
+.todoCreator textarea {
+  margin-top: 16px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
