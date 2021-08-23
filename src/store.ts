@@ -1,7 +1,7 @@
 import create from "zustand";
 import { TodoStore } from "./type";
 const useTodoStore = create<TodoStore>((set) => ({
-  todos: [{ id: 213213, content: "asdsad", completed: false }],
+  todos: [],
   addTodo: (content: string) => {
     set((state) => ({
       todos: [
