@@ -3,9 +3,9 @@ import { useTodoStore } from "../store";
 const TodoCreator: FC = () => {
   const { addTodo } = useTodoStore();
   const handleCreateTodo = (todoText: string) => {
-    if (todoText) {
+    if (textAreaRef.current && textAreaRef.current.value) {
       addTodo(todoText);
-      textAreaRef.current!.value = "";
+      textAreaRef.current.value = "";
     }
   };
   const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
