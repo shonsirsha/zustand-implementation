@@ -1,7 +1,9 @@
 import { FC } from "react";
 import { useTodoStore } from "../store";
 const TodosView: FC = () => {
-  const { todos, deleteTodo, changeTodoStatus } = useTodoStore();
+  const todos = useTodoStore(state => state.todos);
+  const deleteTodo = useTodoStore(state => state.deleteTodo);
+  const changeTodoStatus = useTodoStore(state => state.changeTodoStatus);
   return (
     <div className="todosView">
       <h1>My Todos (All):</h1>

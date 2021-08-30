@@ -1,7 +1,7 @@
 import { FC, useRef } from "react";
 import { useTodoStore } from "../store";
 const TodoCreator: FC = () => {
-  const { addTodo } = useTodoStore();
+  const addTodo = useTodoStore(state => state.addTodo);
   const handleCreateTodo = (todoText: string) => {
     if (textAreaRef.current && textAreaRef.current.value) {
       addTodo(todoText);
